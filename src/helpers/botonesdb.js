@@ -1,4 +1,7 @@
 export let botones = [
+    {nombre:"CATEGORIA",
+     categoria:0
+    },
     {nombre:"CATEGORIA1",
      categoria:1
     },

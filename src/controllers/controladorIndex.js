@@ -22,7 +22,11 @@ filaboton.addEventListener("click",function(evento){
         let objetoboton = objetoBoton(evento)
         console.log(objetoboton)
         
-        if(objetoboton.categoria == 1){
+            if(objetoboton.categoria == 0){
+                filacategorias1.innerHTML=""
+                tituloCategoria.textContent="Categorias de Proyectos"
+                pintarProyectos("filacategorias",categoriadb)
+            }else if(objetoboton.categoria == 1){
             pintarBotones("filabotones",botones)
             filacategorias1.innerHTML=""
             tituloCategoria.textContent="Categoria 1"
