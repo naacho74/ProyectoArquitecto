@@ -23,6 +23,7 @@ filaboton.addEventListener("click",function(evento){
         console.log(objetoboton)
         
             if(objetoboton.categoria == 0){
+                filaboton.innerHTML=""
                 filacategorias1.innerHTML=""
                 tituloCategoria.textContent="Categorias de Proyectos"
                 pintarProyectos("filacategorias",categoriadb)
