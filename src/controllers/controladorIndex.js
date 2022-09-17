@@ -1,19 +1,24 @@
 import {pintarBotones} from './controladorPintarBotones.js'
 import {pintarProyectos} from './controladorPintarProyectos.js'
+import {pintarCategorias} from './controladorPintarCategorias.js'
 
 import {botones} from '../helpers/botonesdb.js'
 import {proyectosdb} from '../helpers/proyectosdb.js'
 import {categoriadb} from '../helpers/categoriasProyectosdb.js'
+import {proyectos} from '../helpers/baseDatosProyecto.js'
+import {categorias} from '../helpers/baseDatosCategorias.js'
 
+import {ampliarCategorias} from './controladorAmpiarCategorias.js'
 import {ampliarProductos} from './controladorAmpliarProductos.js'
 import {objetoBoton} from './controladorObjetoboton.js'
 
 
 let filacategorias1 = document.getElementById("filacategorias")
 let tituloCategoria =document.getElementById("tituloCategoria")
+let filaproyectos = document.getElementById("filaproyectos")
 
 
-pintarProyectos("filacategorias",categoriadb)
+pintarCategorias("filacategorias",categorias)
 
 let filaboton = document.getElementById("filabotones")
 filaboton.addEventListener("click",function(evento){
@@ -23,15 +28,16 @@ filaboton.addEventListener("click",function(evento){
         console.log(objetoboton)
         
             if(objetoboton.categoria == 0){
+                filaproyectos.innerHTML=""
                 filaboton.innerHTML=""
                 filacategorias1.innerHTML=""
                 tituloCategoria.textContent="Categorias de Proyectos"
-                pintarProyectos("filacategorias",categoriadb)
+                pintarCategorias("filacategorias",categorias)
             }else if(objetoboton.categoria == 1){
             pintarBotones("filabotones",botones)
             filacategorias1.innerHTML=""
             tituloCategoria.textContent="Categoria 1"
-            let proyectosdb1 = proyectosdb.filter(function(categoriae){
+            let proyectosdb1 = proyectos.filter(function(categoriae){
 
                 return categoriae.categoria == 1
             })
@@ -40,7 +46,7 @@ filaboton.addEventListener("click",function(evento){
             pintarBotones("filabotones",botones)
             filacategorias1.innerHTML=""
             tituloCategoria.textContent="Categoria 2"
-            let proyectosdb2 = proyectosdb.filter(function(categoriae){
+            let proyectosdb2 = proyectos.filter(function(categoriae){
 
                 return categoriae.categoria == 2
             })
@@ -52,7 +58,7 @@ filaboton.addEventListener("click",function(evento){
             pintarBotones("filabotones",botones)
             filacategorias1.innerHTML=""
             tituloCategoria.textContent="Categoria 3"
-            let proyectosdb3 = proyectosdb.filter(function(categoriae){
+            let proyectosdb3 = proyectos.filter(function(categoriae){
 
                 return categoriae.categoria == 3
             })
@@ -68,24 +74,26 @@ filaboton.addEventListener("click",function(evento){
 let filacategorias = document.getElementById("filacategorias")
 
 filacategorias.addEventListener("click",function(evento){
-    if(evento.target.parentElement.classList.contains("card") == true){
-        let objetoproyecto = ampliarProductos(evento)
-        console.log(objetoproyecto.categoria)
+    if(evento.target.parentElement.classList.contains("tarjetaP") == true){
+        let objetoCategoria = ampliarCategorias(evento)
         
-       if(objetoproyecto.categoria == 1){
+        console.log(objetoCategoria)
+        
+        
+       if(objetoCategoria.categoria == 1){
         pintarBotones("filabotones",botones)
         filacategorias1.innerHTML=""
         tituloCategoria.textContent="Categoria 1"
-        let proyectosdb1 = proyectosdb.filter(function(categoriae){
+        let proyectosdb1 = proyectos.filter(function(categoriae){
 
             return categoriae.categoria == 1
         })
         pintarProyectos("filaproyectos",proyectosdb1)
-       }else if(objetoproyecto.categoria == 2){
+       }else if(objetoCategoria.categoria == 2){
         pintarBotones("filabotones",botones)
         filacategorias1.innerHTML=""
         tituloCategoria.textContent="Categoria 2"
-            let proyectosdb2 = proyectosdb.filter(function(categoriae){
+            let proyectosdb2 = proyectos.filter(function(categoriae){
 
                 return categoriae.categoria == 2
             })
@@ -93,11 +101,11 @@ filacategorias.addEventListener("click",function(evento){
             pintarProyectos("filaproyectos",proyectosdb2)
         
         
-       }else if(objetoproyecto.categoria == 3){
+       }else if(objetoCategoria.categoria == 3){
         pintarBotones("filabotones",botones)
         filacategorias1.innerHTML=""
         tituloCategoria.textContent="Categoria 3"
-        let proyectosdb3 = proyectosdb.filter(function(categoriae){
+        let proyectosdb3 = proyectos.filter(function(categoriae){
 
             return categoriae.categoria == 3
         })
@@ -112,15 +120,18 @@ filacategorias.addEventListener("click",function(evento){
     }
 })
 
-let filaproyectos = document.getElementById("filaproyectos")
 
 filaproyectos.addEventListener("click",function(evento){
-    if(evento.target.parentElement.classList.contains("card") == true){
+    if(evento.target.parentElement.classList.contains("tarjetaP") == true){
 
-        let objetodeproyecto = ampliarProductos(evento)
+        let objetoproyecto = ampliarProductos(evento)
 
-        console.log(objetodeproyecto)
+        console.log(objetoproyecto)
 
-        localStorage("infoProyecto",JSON.stringify(objetodeproyecto))
+
+        sessionStorage.setItem('proyecto',JSON.stringify(objetoproyecto))
+
+        window.location.href='./src/views/infoProyecto.html'   
+    //    localStorage("infoProyecto",JSON.stringify(objetodeproyecto))
     }
 })

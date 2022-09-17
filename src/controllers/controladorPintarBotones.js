@@ -6,7 +6,7 @@ export function pintarBotones(filanav,botones){
     botones.forEach(function(boton){
 
         let columna = document.createElement("div")
-        columna.classList.add("col","p-2","g-0")
+        columna.classList.add("col","col-6","col-md-2")
 
         let boton1 = document.createElement("h6")
         boton1.classList.add("btn")

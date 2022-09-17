@@ -5,33 +5,61 @@ export function pintarProyectos(fila,proyectos){
 
     proyectos.forEach(function(proyecto){
 
+      
         let columna=document.createElement("div")
         columna.classList.add("col")
 
         let tarjetaP= document.createElement("div")
-        tarjetaP.classList.add("card","m-4")
-
-        let tarjeta=document.createElement ("div")
-        tarjeta.classList.add("card-img-overlay","w-100","pointer")
+        tarjetaP.classList.add("m-4","d-flex","p-3","pointer","tarjetaP")
         
         let imagen = document.createElement("img")
-        imagen.classList.add("img-fluid","w-100")
-        imagen.src=proyecto.foto
+        imagen.classList.add("img-fluid","w-75")
+        imagen.src=proyecto.fotos[0]
+        
+        let fila2 = document.createElement("div")
+        fila2.classList.add("row","row-cols-12","row-cols-md-12","w-100","my-auto")
+
+        let columna2 = document.createElement("div")
+        columna2.classList.add("col","col-md-12","col-12")
+        let columna3 = document.createElement("div")
+        columna3.classList.add("col","col-md-12","col-12","d-flex")
          
-        let nombre = document.createElement("h4")
-        nombre.classList.add("text-dark")
-        nombre.textContent=proyecto.titulo
+        let nombreP = document.createElement("h4")
+        nombreP.classList.add("text-dark","mx-5")
+        nombreP.textContent=proyecto.nombre
 
-        let categoria= document.createElement("h6")
-        categoria.classList.add("d-none")
-        categoria.textContent=proyecto.categoria
+        let ubicacionP= document.createElement("h6")
+        ubicacionP.classList.add("mx-5","d-none")
+        ubicacionP.textContent=proyecto.ubicacion
 
-        tarjeta.appendChild(categoria)
-        tarjeta.appendChild(nombre)
+        let añoP = document.createElement("h5")
+        añoP.classList.add("mx-5","mt-5")
+        añoP.textContent=proyecto.año
+
+        let clienteP = document.createElement("h3")
+        clienteP.classList.add("mx-5","d-none")
+        clienteP.textContent=proyecto.cliente
+        
+        let categoriaP = document.createElement("h2")
+        categoriaP.classList.add("d-none")
+        categoriaP.textContent=proyecto.categoria
+        
         tarjetaP.appendChild(imagen)
-        tarjetaP.appendChild(tarjeta)
+        tarjetaP.appendChild(fila2)
+        fila2.appendChild(columna2)
+        fila2.appendChild(columna3)
+        columna2.appendChild(nombreP)
+        columna3.appendChild(añoP)
+        columna3.appendChild(ubicacionP)
+        columna3.appendChild(clienteP)
+        columna3.appendChild(categoriaP)
+
+
+
+        
         columna.appendChild(tarjetaP)
         fila1.appendChild(columna)
+      
 
     })
 }

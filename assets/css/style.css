@@ -1,3 +1,8 @@
 .pointer{
     cursor: pointer;
 }
+
+.imgPequeñas{
+    justify-content: space-evenly;
+    display: flex;
+}

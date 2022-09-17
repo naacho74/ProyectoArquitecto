@@ -1,14 +1,14 @@
 export let botones = [
-    {nombre:"CATEGORIA",
+    {nombre:"Categoria",
      categoria:0
     },
-    {nombre:"CATEGORIA1",
+    {nombre:"Arquitectura",
      categoria:1
     },
-    {nombre:"CATEGORIA2",
+    {nombre:"Alimentos",
     categoria:2
     },
-    {nombre:"CATEGORIA3",
+    {nombre:"Productos",
     categoria:3
    }
 ]
