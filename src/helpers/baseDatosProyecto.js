@@ -79,7 +79,7 @@ export let proyectos = [
       fotos: [
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod2%2FTEN%201%20(1).jpg?alt=media&token=1f2d7544-acb2-4f99-b4d0-a86aa6f760d5",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod2%2FTEN%201%20(2).jpg?alt=media&token=a10ffd44-4804-49c3-acb6-19c434d4f19b",
-        "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod2%2FTEN%201%20(3).jpg?alt=media&token=bb48853e-ae85-44b6-9fef-e214ce046d2c",
+        "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod2%2FTEN%201%20(3).jpg?alt=media&token=c70d04d8-a72b-406c-95de-45d852860861",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod2%2FTEN%201%20(4).jpg?alt=media&token=e740dcd4-cdd8-4fd3-b586-bb3b10139eb1",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod2%2FTEN%201%20(5).jpg?alt=media&token=ab19cb56-da14-4e0c-b88a-988d464e5620",
       ],
