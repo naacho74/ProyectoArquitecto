@@ -39,6 +39,7 @@ export let proyectos = [
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2FProducto1%2FFOTO%20HEL%20(2).jpg?alt=media&token=b74c4131-661c-465e-a062-f27a263eb1eb",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2FProducto1%2FFOTO%20HEL%20(3).jpg?alt=media&token=d212afa0-1d5f-4c2a-b550-815091f8111d",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2FProducto1%2FFOTO%20HEL%20(4).jpg?alt=media&token=971bc294-b8a2-4427-90ec-9cacd4cf7bec",
+        "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2FProducto1%2FFOTO%20HEL%20(1).jpg?alt=media&token=659fedc7-c459-40c9-b779-3bb34bc4eaf6"
       ],
     },
     {
@@ -52,19 +53,21 @@ export let proyectos = [
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2Fproducto2%2FFOTO%20H%20(1).jpg?alt=media&token=6bf9228c-2552-445e-89e9-01baea3b1ed2",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2Fproducto2%2FFOTO%20H%20(3).jpg?alt=media&token=360776a2-db27-4e7f-b914-6abbdde25114",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2Fproducto2%2FFOTO%20H%20(4).jpg?alt=media&token=b60affea-0427-4923-9f31-286b97f64c1b",
+        "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/alimentos%2Fproducto2%2FFOTO%20H%20(3).jpg?alt=media&token=360776a2-db27-4e7f-b914-6abbdde25114"
       ],
     },
     {
       categoria:3,
-      nombre: "Perfumeria Fagancia",
+      nombre: "Perfumeria Fragancia",
       ubicacion:'Medellin Cll 10 # 42-45',
       año:'2020',
       cliente:'Sara Florez',
       fotos: [
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod1%2FPERF%201%20(1).jpg?alt=media&token=9ba7d304-4fb2-4938-9802-57222577978c",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod1%2FPERF%201%20(2).jpg?alt=media&token=c2b03d1c-907f-4509-9d20-4ec9fe2a9793",
-        "gs://metodologias-agiles-177f9.appspot.com/producto/prod1/PERF 1 (3).jpg",
+        "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod1%2FPERF%201%20(3).jpg?alt=media&token=f22ec0de-0806-4ded-8a6f-09bcf1cf3062",
         "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod1%2FPERF%201%20(4).jpg?alt=media&token=157c6987-038b-4e9f-8248-0ba971ca70cb",
+        "https://firebasestorage.googleapis.com/v0/b/metodologias-agiles-177f9.appspot.com/o/producto%2Fprod1%2FPERF%201%20(1).jpg?alt=media&token=9ba7d304-4fb2-4938-9802-57222577978c"
       ],
     },
     {

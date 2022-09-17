@@ -10,7 +10,13 @@ export function pintarBotones(filanav,botones){
 
         let boton1 = document.createElement("h6")
         boton1.classList.add("btn")
-        
+      
+        boton1.addEventListener("mouseleave",function(evento){
+            nombre.classList.remove("border")
+        })
+        boton1.addEventListener("mouseout",function(evento){
+            nombre.classList.add("border")
+        })
 
         let nombre = document.createElement("h5")
         nombre.classList.add("text-center","text-secondary","bg-light","p-3","rounded-pill","g-0")
